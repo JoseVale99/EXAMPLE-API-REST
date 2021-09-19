@@ -43,7 +43,15 @@ class CategoryController extends Controller
       return response()->json(
           [$category,'message' => 'data update success!']); 
     }
-
+    public function delete($id){
+        $category = Category::find($id);
+        if (!$category){
+            return response()->json(['error'=>'404 Not Found'],404);
+           }
+           $category->delete();
+           return response()->json(
+            [$category,'message' => 'data delete success!']);  
+    }
 }
 
 

@@ -27,4 +27,5 @@ Route::get('/category/{id}',[CategoryController::class, 'show']);
 Route::post('/add/category',[CategoryController::class, 'create']);
 //  Route put: update a new data. 
 Route::put('/update/category/{id}',[CategoryController::class, 'update']);
-
+//  Route delete: delete a new data. 
+Route::delete('/delete/category/{id}',[CategoryController::class, 'delete']);
