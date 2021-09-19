@@ -21,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/category',[CategoryController::class, 'index']);
 Route::get('/category/{id}',[CategoryController::class, 'show']);
+Route::post('/add/category',[CategoryController::class, 'create']);
+
+

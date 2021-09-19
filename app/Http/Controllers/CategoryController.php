@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
+use Illuminate\Http\Request;
+
 class CategoryController extends Controller
 {
     //
@@ -22,7 +24,18 @@ class CategoryController extends Controller
         [$category,'message' => 'data show success!']
         );
     }
-    
+    public function create(Request $request){
+
+        $category = Category::create($request->all());
+
+        return response()->json(
+            [$category,'message' => 'data insert success!']
+        );
+    } 
+
+    // public function update(Request $request){
+
+    // }
 
 }
 
