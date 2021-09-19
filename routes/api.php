@@ -19,8 +19,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+//Route get:  return json all data. 
 Route::get('/category',[CategoryController::class, 'index']);
+//  Route get: return json data for ID data.  
 Route::get('/category/{id}',[CategoryController::class, 'show']);
+//  Route post: add a new data. 
 Route::post('/add/category',[CategoryController::class, 'create']);
 
 
