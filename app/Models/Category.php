@@ -9,6 +9,7 @@ class Category extends Model
 {
    
     use SoftDeletes; //delete 
+    protected $dates = ['deleted_at']; // Register a new column
     public $timestamp = false;
 
     protected $fillable = [
