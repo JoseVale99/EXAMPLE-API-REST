@@ -25,5 +25,6 @@ Route::get('/category',[CategoryController::class, 'index']);
 Route::get('/category/{id}',[CategoryController::class, 'show']);
 //  Route post: add a new data. 
 Route::post('/add/category',[CategoryController::class, 'create']);
-
+//  Route put: update a new data. 
+Route::put('/update/category/{id}',[CategoryController::class, 'update']);
 
